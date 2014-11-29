@@ -55,6 +55,9 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    carrierwave-dropbox (1.2.1)
+      carrierwave (~> 0.9)
+      dropbox-sdk (~> 1.6)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
@@ -68,6 +71,8 @@ GEM
     columnize (0.8.9)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    dropbox-sdk (1.6.4)
+      json
     erubis (2.7.0)
     excon (0.41.0)
     execjs (2.2.2)
@@ -251,6 +256,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 0.0.10)
   byebug (= 3.4.0)
   carrierwave (= 0.10.0)
+  carrierwave-dropbox
   coffee-rails (= 4.0.1)
   execjs (~> 2.2.2)
   faker (= 1.4.2)

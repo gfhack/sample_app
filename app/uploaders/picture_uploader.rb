@@ -2,8 +2,17 @@ class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   process resize_to_limit: [400, 400]
 
+  CarrierWave.configure do |config|
+    config.dropbox_app_key = "oijvxm10ambxhjx"
+    config.dropbox_app_secret = "umoszl4brjx9rsa"
+    config.dropbox_access_token = "c9qkh32axhq2xtb8"
+    config.dropbox_access_token_secret = "9283ueeqnnvkiz2"
+    config.dropbox_user_id = "362480352"
+    config.dropbox_access_type = "app_folder"
+  end
+
   if Rails.env.production?
-    storage :fog
+    storage :dropbox
   else
     storage :file
   end
